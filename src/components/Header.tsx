@@ -1,5 +1,29 @@
 function Header() {
-  return <p>Header</p>;
+  return (
+    <>
+      <h1>Color Scheme Lab</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Create</a>
+          </li>
+          <li>
+            <a href="/">Saved</a>
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <label htmlFor="color-mode">Color mode</label>
+        <select id="color-mode">
+          <option value="hex">HEX</option>
+          <option value="rgb">RGB</option>
+          <option value="hsl">HSL</option>
+          <option value="hsv">HSV</option>
+          <option value="cmyk">CMYK</option>
+        </select>
+      </div>
+    </>
+  );
 }
 
 export default Header;
