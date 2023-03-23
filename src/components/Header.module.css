@@ -9,6 +9,12 @@
   margin: 1rem;
 }
 
+.menus {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
 .nav ul {
   display: flex;
   font-size: 0.875rem;
