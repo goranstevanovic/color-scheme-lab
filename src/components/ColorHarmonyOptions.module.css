@@ -43,24 +43,6 @@
   margin: 0;
 }
 
-.button {
-  background-color: #22254b;
-  border-radius: 0.5rem;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-size: inherit;
-  font-weight: bold;
-  grid-area: button;
-  justify-self: center;
-  padding: 1rem 2rem;
-}
-
-.button:focus,
-.button:hover {
-  background-color: #353a75;
-}
-
 @media screen and (min-width: 44rem) {
   .container {
     font-size: 1rem;
@@ -69,11 +51,6 @@
       'description description description description description _ _ _';
     grid-template-columns: repeat(8, 1fr);
     margin: 1rem 1.5rem;
-  }
-
-  .button {
-    align-self: end;
-    justify-self: stretch;
   }
 }
 

@@ -1,3 +1,4 @@
+import Button from './Button';
 import styles from './ColorHarmonyOptions.module.css';
 
 function ColorHarmonyOptions() {
@@ -24,7 +25,7 @@ function ColorHarmonyOptions() {
         comfort. This scheme is best used when you want to create a peaceful,
         relaxing mood, such as in a bedroom or spa.
       </p>
-      <button className={styles.button}>Create Color Scheme</button>
+      <Button type="create">Create Color Scheme</Button>
     </section>
   );
 }
