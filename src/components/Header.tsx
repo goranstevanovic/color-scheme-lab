@@ -1,9 +1,9 @@
-import './Header.module.css';
+import styles from './Header.module.css';
 
 function Header() {
   return (
-    <header>
-      <h1>Color Scheme Lab</h1>
+    <header className={styles.container}>
+      <h1 className={styles.heading}>Color Scheme Lab</h1>
       <nav>
         <ul>
           <li>
