@@ -1,5 +1,4 @@
 .button {
-  background-color: #22254b;
   border-radius: 0.5rem;
   border: none;
   color: #fff;
@@ -11,9 +10,31 @@
   padding: 1rem 2rem;
 }
 
-.button:focus,
-.button:hover {
+.create {
+  background-color: #22254b;
+}
+
+.create:focus,
+.create:hover {
   background-color: #353a75;
+}
+
+.save {
+  background-color: #51b53f;
+}
+
+.save:focus,
+.save:hover {
+  background-color: #3e8a30;
+}
+
+.delete {
+  background-color: #b53f51;
+}
+
+.delete:focus,
+.delete:hover {
+  background-color: #8a303e;
 }
 
 @media screen and (min-width: 44rem) {

@@ -25,7 +25,7 @@ function ColorHarmonyOptions() {
         comfort. This scheme is best used when you want to create a peaceful,
         relaxing mood, such as in a bedroom or spa.
       </p>
-      <Button type="create">Create Color Scheme</Button>
+      <Button type="create" />
     </section>
   );
 }
