@@ -4,10 +4,12 @@ function Header() {
   return (
     <header className={styles.container}>
       <h1 className={styles.heading}>Color Scheme Lab</h1>
-      <nav>
+      <nav className={styles.nav}>
         <ul>
           <li>
-            <a href="/">Create</a>
+            <a className={styles.active} href="/">
+              Create
+            </a>
           </li>
           <li>
             <a href="/">Saved</a>
