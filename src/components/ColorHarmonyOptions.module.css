@@ -60,3 +60,19 @@
 .button:hover {
   background-color: #353a75;
 }
+
+@media screen and (min-width: 46rem) {
+  .container {
+    font-size: 1rem;
+    grid-template-areas:
+      'base-color base-color color-harmony-rule color-harmony-rule color-harmony-rule button button button'
+      'description description description description description _ _ _';
+    grid-template-columns: repeat(8, 1fr);
+    margin: 1rem 1.5rem;
+  }
+
+  .button {
+    align-self: end;
+    justify-self: stretch;
+  }
+}
