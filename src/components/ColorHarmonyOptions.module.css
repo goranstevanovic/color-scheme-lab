@@ -1,0 +1,69 @@
+:root {
+  --border: 1px solid var(--borderColor);
+  --borderColor: #dddce3;
+}
+
+.container {
+  display: grid;
+  font-size: 0.875rem;
+  gap: 1rem;
+  grid-template-areas:
+    'base-color color-harmony-rule'
+    'description description'
+    'button button';
+  grid-template-columns: 1fr 3fr;
+  margin: 1rem;
+}
+
+.baseColor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  grid-area: base-color;
+}
+
+.baseColor input {
+  border-radius: 0.5rem;
+  border: var(--border);
+  height: 3rem;
+  width: 100%;
+}
+
+.colorHarmonyRule {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  grid-area: color-harmony-rule;
+}
+
+.colorHarmonyRule select {
+  border-radius: 0.5rem;
+  border: var(--border);
+  font-size: inherit;
+  padding: 0.875rem 1rem;
+}
+
+.description {
+  grid-area: description;
+  margin: 0;
+}
+
+@media screen and (min-width: 44rem) {
+  .container {
+    font-size: 1rem;
+    grid-template-areas:
+      'base-color base-color color-harmony-rule color-harmony-rule color-harmony-rule button button button'
+      'description description description description description _ _ _';
+    grid-template-columns: repeat(8, 1fr);
+    margin: 1rem 1.5rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  .container {
+    font-size: 1.125rem;
+    gap: 2rem;
+    margin: 1rem auto;
+    max-width: 46rem;
+  }
+}

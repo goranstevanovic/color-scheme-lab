@@ -1,0 +1,55 @@
+:root {
+  --createBgColor: #22254b;
+  --createBgHoverColor: #353a75;
+  --deleteBgColor: #b53f51;
+  --deleteBgHoverColor: #8a303e;
+  --saveBgColor: #51b53f;
+  --saveBgHoverColor: #3e8a30;
+  --textColor: #fff;
+}
+
+.button {
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--textColor);
+  cursor: pointer;
+  font-size: inherit;
+  font-weight: bold;
+  grid-area: button;
+  justify-self: center;
+  padding: 1rem 2rem;
+}
+
+.create {
+  background-color: var(--createBgColor);
+}
+
+.create:focus,
+.create:hover {
+  background-color: var(--createBgHoverColor);
+}
+
+.save {
+  background-color: var(--saveBgColor);
+}
+
+.save:focus,
+.save:hover {
+  background-color: var(--saveBgHoverColor);
+}
+
+.delete {
+  background-color: var(--deleteBgColor);
+}
+
+.delete:focus,
+.delete:hover {
+  background-color: var(--deleteBgHoverColor);
+}
+
+@media screen and (min-width: 44rem) {
+  .button {
+    align-self: end;
+    justify-self: stretch;
+  }
+}
