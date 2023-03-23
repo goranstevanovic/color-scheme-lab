@@ -66,3 +66,22 @@
     font-size: 0.875rem;
   }
 }
+
+@media screen and (min-width: 74rem) {
+  .container {
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .nav ul {
+    font-size: 1.25rem;
+  }
+
+  .colorMode {
+    font-size: 1rem;
+  }
+}
