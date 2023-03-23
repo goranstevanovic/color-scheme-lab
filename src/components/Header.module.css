@@ -4,9 +4,9 @@
 
 .heading {
   font-size: 1.125rem;
-  text-align: center;
   font-weight: bold;
   margin: 1rem 0;
+  text-align: center;
 }
 
 .menus {
@@ -16,10 +16,10 @@
 }
 
 .nav ul {
+  align-items: flex-start;
   display: flex;
   font-size: 0.875rem;
   gap: 1rem;
-  align-items: flex-start;
 }
 
 .nav a {
