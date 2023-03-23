@@ -61,7 +61,7 @@
   background-color: #353a75;
 }
 
-@media screen and (min-width: 46rem) {
+@media screen and (min-width: 44rem) {
   .container {
     font-size: 1rem;
     grid-template-areas:
