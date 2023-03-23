@@ -23,3 +23,15 @@
 .active {
   font-weight: bold;
 }
+
+.colorMode {
+  font-size: 0.7rem;
+}
+
+.colorMode select {
+  border-radius: 0.5rem;
+  font-size: inherit;
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+}

@@ -16,7 +16,7 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <div>
+      <div className={styles.colorMode}>
         <label htmlFor="color-mode">Color mode</label>
         <select id="color-mode">
           <option value="hex">HEX</option>
