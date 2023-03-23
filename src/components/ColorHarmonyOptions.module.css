@@ -24,11 +24,16 @@
 }
 
 .colorHarmonyRule {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   grid-area: color-harmony-rule;
 }
 
 .colorHarmonyRule select {
+  border-radius: 0.5rem;
   font-size: inherit;
+  padding: 0.875rem 1rem;
 }
 
 .description {
