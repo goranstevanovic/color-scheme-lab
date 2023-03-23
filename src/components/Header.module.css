@@ -1,0 +1,87 @@
+.container {
+  margin: 1rem;
+}
+
+.heading {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.menus {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav ul {
+  align-items: flex-start;
+  display: flex;
+  font-size: 0.875rem;
+  gap: 1rem;
+}
+
+.nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.colorMode {
+  font-size: 0.7rem;
+}
+
+.colorMode select {
+  border-radius: 0.5rem;
+  font-size: inherit;
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 46rem) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .menus {
+    gap: 4rem;
+  }
+
+  .nav ul {
+    font-size: 1rem;
+  }
+
+  .colorMode {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (min-width: 74rem) {
+  .container {
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .nav ul {
+    font-size: 1.25rem;
+  }
+
+  .colorMode {
+    font-size: 1rem;
+  }
+}
