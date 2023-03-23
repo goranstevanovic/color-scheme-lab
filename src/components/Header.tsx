@@ -1,6 +1,8 @@
+import './Header.module.css';
+
 function Header() {
   return (
-    <>
+    <header>
       <h1>Color Scheme Lab</h1>
       <nav>
         <ul>
@@ -22,7 +24,7 @@ function Header() {
           <option value="cmyk">CMYK</option>
         </select>
       </div>
-    </>
+    </header>
   );
 }
 
