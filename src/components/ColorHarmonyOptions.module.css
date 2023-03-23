@@ -1,5 +1,6 @@
 .container {
   display: grid;
+  font-size: 0.875rem;
   gap: 1rem;
   grid-template-areas:
     'base-color color-harmony-rule'
@@ -17,10 +18,15 @@
   grid-area: color-harmony-rule;
 }
 
+.colorHarmonyRule select {
+  font-size: inherit;
+}
+
 .description {
   grid-area: description;
 }
 
 .button {
+  font-size: inherit;
   grid-area: button;
 }
