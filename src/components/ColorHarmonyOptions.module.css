@@ -38,6 +38,7 @@
 
 .description {
   grid-area: description;
+  margin: 0;
 }
 
 .button {
