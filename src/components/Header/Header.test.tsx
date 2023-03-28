@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import Header from './Header';
+import Header from '.';
 
 describe('Header', () => {
   it('displays the app title', () => {

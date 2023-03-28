@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import ColorHarmonyOptions from './ColorHarmonyOptions';
+import ColorHarmonyOptions from '.';
 
 describe('ColorHarmonyOptions', () => {
   it('displays the base color input', () => {
