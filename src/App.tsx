@@ -9,7 +9,6 @@ function App() {
       <Header />
       <ColorHarmonyOptions />
       <ColorScheme buttonType="save" colorSchemeData={colorSchemeSample} />
-      <p>App</p>
     </>
   );
 }
