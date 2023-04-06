@@ -16,6 +16,9 @@ function ColorScheme({
 
   return (
     <>
+      {colorSchemeTitle && (
+        <p className="colorSchemeTitle">{colorSchemeTitle}</p>
+      )}
       <p>ColorScheme</p>
       {button}
     </>
