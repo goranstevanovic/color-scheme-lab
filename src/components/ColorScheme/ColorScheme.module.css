@@ -1,0 +1,13 @@
+.colorSchemeWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.colorSchemeWrapper button {
+  align-self: center;
+}
+
+.colorScheme {
+  display: flex;
+  margin: 4rem 0;
+}

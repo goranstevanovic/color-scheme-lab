@@ -1,6 +1,7 @@
 import Button from '../Button';
 import ColorSwatch from '../ColorSwatch';
 import { ColorScheme as ColorSchemeType } from '../../data/colorScheme';
+import styles from './ColorScheme.module.css';
 
 type colorSchemeProps = {
   buttonType: 'save' | 'delete';
@@ -30,14 +31,16 @@ function ColorScheme({
   ));
 
   return (
-    <>
+    <div className={styles.colorSchemeWrapper}>
       {colorSchemeTitle && (
         <p className="colorSchemeTitle">{colorSchemeTitle}</p>
       )}
-      {baseColorSwatch}
-      {remainingColorSwatches}
+      <div className={styles.colorScheme}>
+        {baseColorSwatch}
+        {remainingColorSwatches}
+      </div>
       {button}
-    </>
+    </div>
   );
 }
 
