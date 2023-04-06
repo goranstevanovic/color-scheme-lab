@@ -1,3 +1,5 @@
+import styles from './ColorSwatch.module.css';
+
 type textColorType = '#ffffff' | '#000000';
 
 type colorSwatchProps = {
@@ -13,9 +15,9 @@ function ColorSwatch({ colorCode, colorName, textColor }: colorSwatchProps) {
   };
 
   return (
-    <div style={style}>
-      <p>{colorCode}</p>
-      <p>{colorName}</p>
+    <div className={styles.colorSwatch} style={style}>
+      <p className={styles.colorCode}>{colorCode}</p>
+      <p className={styles.colorName}>{colorName}</p>
     </div>
   );
 }

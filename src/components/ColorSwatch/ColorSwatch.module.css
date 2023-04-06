@@ -1,0 +1,25 @@
+.colorSwatch {
+  align-items: end;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  min-height: 300px;
+  padding: 2rem 1rem;
+  width: 100%;
+  writing-mode: vertical-lr;
+}
+
+.colorSwatch p {
+  margin: 0;
+  transform: rotate(180deg);
+}
+
+.colorCode {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.colorName {
+  font-size: 0.75rem;
+}
