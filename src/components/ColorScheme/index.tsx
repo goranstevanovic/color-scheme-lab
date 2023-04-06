@@ -1,4 +1,5 @@
 import Button from '../Button';
+import ColorSwatch from '../ColorSwatch';
 import { ColorScheme as ColorSchemeType } from '../../data/colorScheme';
 
 type colorSchemeProps = {
@@ -19,7 +20,7 @@ function ColorScheme({
       {colorSchemeTitle && (
         <p className="colorSchemeTitle">{colorSchemeTitle}</p>
       )}
-      <p>ColorScheme</p>
+      <ColorSwatch />
       {button}
     </>
   );
