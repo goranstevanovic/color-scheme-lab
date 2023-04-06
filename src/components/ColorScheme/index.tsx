@@ -14,13 +14,28 @@ function ColorScheme({
   colorSchemeTitle,
 }: colorSchemeProps) {
   const button = <Button type={buttonType} />;
+  const baseColorSwatch = (
+    <ColorSwatch
+      colorCode={colorSchemeData.seed.hex.value}
+      colorName={colorSchemeData.seed.name.value}
+      textColor={colorSchemeData.seed.contrast.value}
+    />
+  );
+  const remainingColorSwatches = colorSchemeData.colors.map((color) => (
+    <ColorSwatch
+      colorCode={color.hex.value}
+      colorName={color.name.value}
+      textColor={color.contrast.value}
+    />
+  ));
 
   return (
     <>
       {colorSchemeTitle && (
         <p className="colorSchemeTitle">{colorSchemeTitle}</p>
       )}
-      <ColorSwatch />
+      {baseColorSwatch}
+      {remainingColorSwatches}
       {button}
     </>
   );
