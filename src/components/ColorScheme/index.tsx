@@ -1,3 +1,4 @@
+import Button from '../Button';
 import { ColorScheme as ColorSchemeType } from '../../data/colorScheme';
 
 type colorSchemeProps = {
@@ -11,7 +12,14 @@ function ColorScheme({
   colorSchemeData,
   colorSchemeTitle,
 }: colorSchemeProps) {
-  return <p>ColorScheme</p>;
+  const button = <Button type={buttonType} />;
+
+  return (
+    <>
+      <p>ColorScheme</p>
+      {button}
+    </>
+  );
 }
 
 export default ColorScheme;
