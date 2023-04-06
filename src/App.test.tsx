@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders text', () => {
   render(<App />);
-  const textElement = screen.getByText(/App/i);
+  const textElement = screen.getByText(/Color Scheme Lab/i);
   expect(textElement).toBeInTheDocument();
 });
