@@ -1,7 +1,5 @@
 import styles from './ColorSwatch.module.css';
 
-type textColorType = '#ffffff' | '#000000';
-
 type colorSwatchProps = {
   colorCode: string;
   colorName: string;
