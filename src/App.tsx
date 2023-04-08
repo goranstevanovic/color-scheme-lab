@@ -1,14 +1,25 @@
-import Header from './components/Header';
-import ColorHarmonyOptions from './components/ColorHarmonyOptions';
-import ColorScheme from './components/ColorScheme';
-import { colorSchemeSample } from './data/colorScheme';
+import {
+  RouterProvider,
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from 'react-router-dom';
+
+import Root from './pages/Root';
+import Create from './pages/Create';
 
 function App() {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Root />}>
+        <Route index element={<Create />} />
+      </Route>
+    )
+  );
+
   return (
     <>
-      <Header />
-      <ColorHarmonyOptions />
-      <ColorScheme buttonType="save" colorSchemeData={colorSchemeSample} />
+      <RouterProvider router={router} />
     </>
   );
 }
