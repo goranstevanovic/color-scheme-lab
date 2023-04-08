@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 import styles from './Header.module.css';
 
 function Header() {
@@ -8,12 +10,15 @@ function Header() {
         <nav className={styles.nav}>
           <ul>
             <li>
-              <a className={styles.active} href="/">
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? styles.active : '')}
+              >
                 Create
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="/">Saved</a>
+              <NavLink to="/saved">Saved</NavLink>
             </li>
           </ul>
         </nav>
