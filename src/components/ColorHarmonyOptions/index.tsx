@@ -3,15 +3,24 @@ import styles from './ColorHarmonyOptions.module.css';
 
 type colorHarmonyOptionsProps = {
   baseColor: string;
+  colorHarmonyRule: string;
   setBaseColor: Function;
+  setColorHarmonyRule: Function;
 };
 
 function ColorHarmonyOptions({
   baseColor,
+  colorHarmonyRule,
   setBaseColor,
+  setColorHarmonyRule,
 }: colorHarmonyOptionsProps) {
   const baseColorChangeHandler = (e: any) => {
     setBaseColor(e.target.value);
+    console.log(e.target.value);
+  };
+
+  const colorHarmonyRuleChangeHandler = (e: any) => {
+    setColorHarmonyRule(e.target.value);
     console.log(e.target.value);
   };
 
@@ -28,7 +37,11 @@ function ColorHarmonyOptions({
       </div>
       <div className={styles.colorHarmonyRule}>
         <label htmlFor="color-harmony-rule">Color harmony rule</label>
-        <select id="color-harmony-rule" value="monocrome">
+        <select
+          id="color-harmony-rule"
+          value={colorHarmonyRule}
+          onChange={colorHarmonyRuleChangeHandler}
+        >
           <option value="analogic">Analogous</option>
           <option value="monochrome">Monochromatic</option>
           <option value="triad">Triad</option>
