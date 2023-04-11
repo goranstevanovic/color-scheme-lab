@@ -1,5 +1,6 @@
 import Button from '../Button';
 import styles from './ColorHarmonyOptions.module.css';
+import colorHarmonyRuleDescriptions from '../../data/colorHarmonyRuleDescriptions';
 
 type colorHarmonyOptionsProps = {
   baseColor: string;
@@ -51,10 +52,7 @@ function ColorHarmonyOptions({
         </select>
       </div>
       <p className={styles.description}>
-        This color scheme creates a sense of harmony and unity, as the colors
-        blend together seamlessly. It can convey a feeling of warmth and
-        comfort. This scheme is best used when you want to create a peaceful,
-        relaxing mood, such as in a bedroom or spa.
+        {colorHarmonyRuleDescriptions[colorHarmonyRule]}
       </p>
       <Button type="create" />
     </section>
