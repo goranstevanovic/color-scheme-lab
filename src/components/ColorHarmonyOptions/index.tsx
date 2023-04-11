@@ -1,16 +1,62 @@
 import Button from '../Button';
 import styles from './ColorHarmonyOptions.module.css';
+import colorHarmonyRules from '../../data/colorHarmonyRules';
 
-function ColorHarmonyOptions() {
+type colorHarmonyOptionsProps = {
+  baseColor: string;
+  colorHarmonyRule: string;
+  setBaseColor: Function;
+  setColorHarmonyRule: Function;
+  setColorSchemeData: Function;
+};
+
+function ColorHarmonyOptions({
+  baseColor,
+  colorHarmonyRule,
+  setBaseColor,
+  setColorHarmonyRule,
+  setColorSchemeData,
+}: colorHarmonyOptionsProps) {
+  const baseColorChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setBaseColor(e.target.value);
+  };
+
+  const colorHarmonyRuleChangeHandler = (
+    e: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    setColorHarmonyRule(e.target.value);
+  };
+
+  const createColorSchemeClickHandler = async (
+    e: React.MouseEvent
+  ): Promise<void> => {
+    const color = baseColor.slice(1).toLowerCase();
+    const colorQty = colorHarmonyRules[colorHarmonyRule].colorQty - 1;
+    const url = `https://www.thecolorapi.com/scheme?hex=${color}&format=json&mode=${colorHarmonyRule}&count=${colorQty}`;
+
+    const response = await fetch(url);
+    const colorSchemeData = await response.json();
+    setColorSchemeData(colorSchemeData);
+  };
+
   return (
     <section className={styles.container}>
       <div className={styles.baseColor}>
         <label htmlFor="base-color">Base color</label>
-        <input id="base-color" type="color" value="#2196F3" />
+        <input
+          id="base-color"
+          type="color"
+          value={baseColor}
+          onChange={baseColorChangeHandler}
+        />
       </div>
       <div className={styles.colorHarmonyRule}>
         <label htmlFor="color-harmony-rule">Color harmony rule</label>
-        <select id="color-harmony-rule">
+        <select
+          id="color-harmony-rule"
+          value={colorHarmonyRule}
+          onChange={colorHarmonyRuleChangeHandler}
+        >
           <option value="analogic">Analogous</option>
           <option value="monochrome">Monochromatic</option>
           <option value="triad">Triad</option>
@@ -20,12 +66,9 @@ function ColorHarmonyOptions() {
         </select>
       </div>
       <p className={styles.description}>
-        This color scheme creates a sense of harmony and unity, as the colors
-        blend together seamlessly. It can convey a feeling of warmth and
-        comfort. This scheme is best used when you want to create a peaceful,
-        relaxing mood, such as in a bedroom or spa.
+        {colorHarmonyRules[colorHarmonyRule].description}
       </p>
-      <Button type="create" />
+      <Button type="create" onClick={createColorSchemeClickHandler} />
     </section>
   );
 }

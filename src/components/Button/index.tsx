@@ -4,9 +4,10 @@ type buttonType = 'create' | 'save' | 'delete';
 
 type buttonProps = {
   type: buttonType;
+  onClick: Function;
 };
 
-function Button({ type }: buttonProps) {
+function Button({ type, onClick }: buttonProps) {
   let classes = styles.button;
   let text;
 
@@ -25,7 +26,11 @@ function Button({ type }: buttonProps) {
       break;
   }
 
-  return <button className={classes}>{text}</button>;
+  return (
+    <button className={classes} onClick={(e) => onClick(e)}>
+      {text}
+    </button>
+  );
 }
 
 export default Button;

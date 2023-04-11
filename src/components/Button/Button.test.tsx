@@ -4,7 +4,7 @@ import Button from '.';
 
 describe('Button', () => {
   it('displays the create button', () => {
-    render(<Button type="create" />);
+    render(<Button type="create" onClick={() => {}} />);
 
     expect(screen.getByText(/create color scheme/i)).toBeInTheDocument();
 
@@ -13,7 +13,7 @@ describe('Button', () => {
   });
 
   it('displays the save button', () => {
-    render(<Button type="save" />);
+    render(<Button type="save" onClick={() => {}} />);
 
     expect(screen.getByText(/save color scheme/i)).toBeInTheDocument();
 
@@ -22,7 +22,7 @@ describe('Button', () => {
   });
 
   it('displays the delete button', () => {
-    render(<Button type="delete" />);
+    render(<Button type="delete" onClick={() => {}} />);
 
     expect(screen.getByText(/delete color scheme/i)).toBeInTheDocument();
 

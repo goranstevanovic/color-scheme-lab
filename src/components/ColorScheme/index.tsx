@@ -14,7 +14,14 @@ function ColorScheme({
   colorSchemeData,
   colorSchemeTitle,
 }: colorSchemeProps) {
-  const button = <Button type={buttonType} />;
+  // For some color schemes, fetched color scheme data object contains `count`
+  // field with correct number, but the `colors` array contains more colors
+  // than necessary. `colorQty` is used to hold the actual number of colors
+  // needed for current color scheme, and it's used to slice the `colors` array
+  // to correct length
+  const colorQty = Number(colorSchemeData.count);
+
+  const button = <Button type={buttonType} onClick={() => {}} />;
   const baseColorSwatch = (
     <ColorSwatch
       colorCode={colorSchemeData.seed.hex.value}
@@ -22,13 +29,16 @@ function ColorScheme({
       textColor={colorSchemeData.seed.contrast.value}
     />
   );
-  const remainingColorSwatches = colorSchemeData.colors.map((color) => (
-    <ColorSwatch
-      colorCode={color.hex.value}
-      colorName={color.name.value}
-      textColor={color.contrast.value}
-    />
-  ));
+  const remainingColorSwatches = colorSchemeData.colors
+    .slice(0, colorQty)
+    .map((color) => (
+      <ColorSwatch
+        key={color.hex.value}
+        colorCode={color.hex.value}
+        colorName={color.name.value}
+        textColor={color.contrast.value}
+      />
+    ));
 
   return (
     <div className={styles.colorSchemeWrapper}>
