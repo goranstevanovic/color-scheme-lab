@@ -1,6 +1,6 @@
 import Button from '../Button';
 import styles from './ColorHarmonyOptions.module.css';
-import colorHarmonyRuleDescriptions from '../../data/colorHarmonyRuleDescriptions';
+import colorHarmonyRules from '../../data/colorHarmonyRules';
 
 type colorHarmonyOptionsProps = {
   baseColor: string;
@@ -52,7 +52,7 @@ function ColorHarmonyOptions({
         </select>
       </div>
       <p className={styles.description}>
-        {colorHarmonyRuleDescriptions[colorHarmonyRule]}
+        {colorHarmonyRules[colorHarmonyRule].description}
       </p>
       <Button type="create" />
     </section>
