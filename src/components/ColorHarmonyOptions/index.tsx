@@ -14,11 +14,13 @@ function ColorHarmonyOptions({
   setBaseColor,
   setColorHarmonyRule,
 }: colorHarmonyOptionsProps) {
-  const baseColorChangeHandler = (e: any) => {
+  const baseColorChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setBaseColor(e.target.value);
   };
 
-  const colorHarmonyRuleChangeHandler = (e: any) => {
+  const colorHarmonyRuleChangeHandler = (
+    e: React.ChangeEvent<HTMLSelectElement>
+  ) => {
     setColorHarmonyRule(e.target.value);
   };
 
