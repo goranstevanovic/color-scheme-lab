@@ -37,7 +37,6 @@ function ColorHarmonyOptions({
     const response = await fetch(url);
     const colorSchemeData = await response.json();
     setColorSchemeData(colorSchemeData);
-    console.log(colorSchemeData);
   };
 
   return (
