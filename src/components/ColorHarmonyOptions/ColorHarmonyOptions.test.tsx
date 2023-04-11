@@ -10,6 +10,7 @@ describe('ColorHarmonyOptions', () => {
         colorHarmonyRule="monochrome"
         setBaseColor={() => {}}
         setColorHarmonyRule={() => {}}
+        setColorSchemeData={() => {}}
       />
     );
 
@@ -23,6 +24,7 @@ describe('ColorHarmonyOptions', () => {
         colorHarmonyRule="monochrome"
         setBaseColor={() => {}}
         setColorHarmonyRule={() => {}}
+        setColorSchemeData={() => {}}
       />
     );
 
@@ -36,6 +38,7 @@ describe('ColorHarmonyOptions', () => {
         colorHarmonyRule="monochrome"
         setBaseColor={() => {}}
         setColorHarmonyRule={() => {}}
+        setColorSchemeData={() => {}}
       />
     );
 
@@ -49,6 +52,7 @@ describe('ColorHarmonyOptions', () => {
         colorHarmonyRule="monochrome"
         setBaseColor={() => {}}
         setColorHarmonyRule={() => {}}
+        setColorSchemeData={() => {}}
       />
     );
 

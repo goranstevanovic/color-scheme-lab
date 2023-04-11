@@ -7,6 +7,7 @@ type colorHarmonyOptionsProps = {
   colorHarmonyRule: string;
   setBaseColor: Function;
   setColorHarmonyRule: Function;
+  setColorSchemeData: Function;
 };
 
 function ColorHarmonyOptions({
@@ -14,6 +15,7 @@ function ColorHarmonyOptions({
   colorHarmonyRule,
   setBaseColor,
   setColorHarmonyRule,
+  setColorSchemeData,
 }: colorHarmonyOptionsProps) {
   const baseColorChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setBaseColor(e.target.value);
