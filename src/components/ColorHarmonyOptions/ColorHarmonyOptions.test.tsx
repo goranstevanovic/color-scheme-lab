@@ -4,25 +4,25 @@ import ColorHarmonyOptions from '.';
 
 describe('ColorHarmonyOptions', () => {
   it('displays the base color input', () => {
-    render(<ColorHarmonyOptions />);
+    render(<ColorHarmonyOptions baseColor="#2196F3" setBaseColor={() => {}} />);
 
     expect(screen.getByLabelText(/Base color/)).toBeInTheDocument();
   });
 
   it('displays the color harmony rule select menu', () => {
-    render(<ColorHarmonyOptions />);
+    render(<ColorHarmonyOptions baseColor="#2196F3" setBaseColor={() => {}} />);
 
     expect(screen.getByLabelText(/Color harmony rule/)).toBeInTheDocument();
   });
 
   it('displays the color harmony rule description', () => {
-    render(<ColorHarmonyOptions />);
+    render(<ColorHarmonyOptions baseColor="#2196F3" setBaseColor={() => {}} />);
 
     expect(screen.getByText(/This color scheme/)).toBeInTheDocument();
   });
 
   it('displays the create color scheme button', () => {
-    render(<ColorHarmonyOptions />);
+    render(<ColorHarmonyOptions baseColor="#2196F3" setBaseColor={() => {}} />);
 
     expect(screen.getByText(/Create Color Scheme/)).toBeInTheDocument();
   });

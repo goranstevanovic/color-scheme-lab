@@ -1,16 +1,34 @@
 import Button from '../Button';
 import styles from './ColorHarmonyOptions.module.css';
 
-function ColorHarmonyOptions() {
+type colorHarmonyOptionsProps = {
+  baseColor: string;
+  setBaseColor: Function;
+};
+
+function ColorHarmonyOptions({
+  baseColor,
+  setBaseColor,
+}: colorHarmonyOptionsProps) {
+  const baseColorChangeHandler = (e: any) => {
+    setBaseColor(e.target.value);
+    console.log(e.target.value);
+  };
+
   return (
     <section className={styles.container}>
       <div className={styles.baseColor}>
         <label htmlFor="base-color">Base color</label>
-        <input id="base-color" type="color" value="#2196F3" />
+        <input
+          id="base-color"
+          type="color"
+          value={baseColor}
+          onChange={baseColorChangeHandler}
+        />
       </div>
       <div className={styles.colorHarmonyRule}>
         <label htmlFor="color-harmony-rule">Color harmony rule</label>
-        <select id="color-harmony-rule">
+        <select id="color-harmony-rule" value="monocrome">
           <option value="analogic">Analogous</option>
           <option value="monochrome">Monochromatic</option>
           <option value="triad">Triad</option>
