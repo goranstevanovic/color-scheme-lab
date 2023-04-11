@@ -15,7 +15,6 @@ function Create() {
         setBaseColor={(color: string) => setBaseColor(color)}
         setColorHarmonyRule={(rule: string) => setColorHarmonyRule(rule)}
       />
-      Color harmony rule: {colorHarmonyRule}
       <ColorScheme buttonType="save" colorSchemeData={colorSchemeSample} />
     </>
   );
