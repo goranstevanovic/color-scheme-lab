@@ -16,12 +16,10 @@ function ColorHarmonyOptions({
 }: colorHarmonyOptionsProps) {
   const baseColorChangeHandler = (e: any) => {
     setBaseColor(e.target.value);
-    console.log(e.target.value);
   };
 
   const colorHarmonyRuleChangeHandler = (e: any) => {
     setColorHarmonyRule(e.target.value);
-    console.log(e.target.value);
   };
 
   return (
