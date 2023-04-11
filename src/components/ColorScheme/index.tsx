@@ -14,7 +14,7 @@ function ColorScheme({
   colorSchemeData,
   colorSchemeTitle,
 }: colorSchemeProps) {
-  const button = <Button type={buttonType} />;
+  const button = <Button type={buttonType} onClick={() => {}} />;
   const baseColorSwatch = (
     <ColorSwatch
       colorCode={colorSchemeData.seed.hex.value}

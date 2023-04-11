@@ -27,6 +27,19 @@ function ColorHarmonyOptions({
     setColorHarmonyRule(e.target.value);
   };
 
+  const createColorSchemeClickHandler = async (
+    e: React.MouseEvent
+  ): Promise<void> => {
+    const color = baseColor.slice(1).toLowerCase();
+    const colorQty = colorHarmonyRules[colorHarmonyRule].colorQty - 1;
+    const url = `https://www.thecolorapi.com/scheme?hex=${color}&format=json&mode=${colorHarmonyRule}&count=${colorQty}`;
+
+    const response = await fetch(url);
+    const colorSchemeData = await response.json();
+    setColorSchemeData(colorSchemeData);
+    console.log(colorSchemeData);
+  };
+
   return (
     <section className={styles.container}>
       <div className={styles.baseColor}>
@@ -56,7 +69,7 @@ function ColorHarmonyOptions({
       <p className={styles.description}>
         {colorHarmonyRules[colorHarmonyRule].description}
       </p>
-      <Button type="create" />
+      <Button type="create" onClick={createColorSchemeClickHandler} />
     </section>
   );
 }
