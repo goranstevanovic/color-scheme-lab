@@ -33,6 +33,7 @@ function ColorScheme({
     .slice(0, colorQty)
     .map((color) => (
       <ColorSwatch
+        key={color.hex.value}
         colorCode={color.hex.value}
         colorName={color.name.value}
         textColor={color.contrast.value}
