@@ -7,12 +7,14 @@ type colorSchemeProps = {
   buttonType: 'save' | 'delete';
   colorSchemeData: ColorSchemeType;
   colorSchemeTitle?: string;
+  clickHandler?: Function;
 };
 
 function ColorScheme({
   buttonType,
   colorSchemeData,
   colorSchemeTitle,
+  clickHandler = () => {},
 }: colorSchemeProps) {
   // For some color schemes, fetched color scheme data object contains `count`
   // field with correct number, but the `colors` array contains more colors
@@ -21,7 +23,7 @@ function ColorScheme({
   // to correct length
   const colorQty = Number(colorSchemeData.count);
 
-  const button = <Button type={buttonType} onClick={() => {}} />;
+  const button = <Button type={buttonType} onClick={clickHandler} />;
   const baseColorSwatch = (
     <ColorSwatch
       colorCode={colorSchemeData.seed.hex.value}

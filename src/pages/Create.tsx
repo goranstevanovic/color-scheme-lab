@@ -11,6 +11,23 @@ function Create() {
   const [colorHarmonyRule, setColorHarmonyRule] = useState('monochrome');
   const [colorSchemeData, setColorSchemeData] = useState(colorSchemeSample);
 
+  const saveColorSchemeClickHandler = () => {
+    const baseColorValue = colorSchemeData.seed.hex.clean.toLowerCase();
+    const colorMode = colorSchemeData.mode;
+    const colorSchemeKey = baseColorValue + '-' + colorMode;
+    const savedColorSchemes = JSON.parse(
+      localStorage.getItem('savedColorSchemes') || '{}'
+    );
+    const newSavedColorSchemes = {
+      ...savedColorSchemes,
+      [colorSchemeKey]: colorSchemeData,
+    };
+    localStorage.setItem(
+      'savedColorSchemes',
+      JSON.stringify(newSavedColorSchemes)
+    );
+  };
+
   return (
     <>
       <ColorHarmonyOptions
@@ -22,7 +39,11 @@ function Create() {
           setColorSchemeData(colorSchemeData)
         }
       />
-      <ColorScheme buttonType="save" colorSchemeData={colorSchemeData} />
+      <ColorScheme
+        buttonType="save"
+        colorSchemeData={colorSchemeData}
+        clickHandler={saveColorSchemeClickHandler}
+      />
     </>
   );
 }
