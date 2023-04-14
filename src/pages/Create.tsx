@@ -13,10 +13,19 @@ function Create() {
 
   const saveColorSchemeClickHandler = () => {
     const baseColorValue = colorSchemeData.seed.hex.clean.toLowerCase();
-    const newColorScheme = {
-      [baseColorValue]: colorSchemeData,
+    const colorMode = colorSchemeData.mode;
+    const colorSchemeKey = baseColorValue + '-' + colorMode;
+    const savedColorSchemes = JSON.parse(
+      localStorage.getItem('savedColorSchemes') || '{}'
+    );
+    const newSavedColorSchemes = {
+      ...savedColorSchemes,
+      [colorSchemeKey]: colorSchemeData,
     };
-    console.log(newColorScheme);
+    localStorage.setItem(
+      'savedColorSchemes',
+      JSON.stringify(newSavedColorSchemes)
+    );
   };
 
   return (
