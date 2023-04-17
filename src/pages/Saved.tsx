@@ -18,6 +18,20 @@ function Saved() {
     }
   }, []);
 
+  const deleteColorScheme = (colorSchemeId: string) => {
+    const updatedSavedColorSchemes: SavedColorSchemeType = {};
+    for (let [key, value] of Object.entries(savedColorSchemes)) {
+      if (key !== colorSchemeId) {
+        updatedSavedColorSchemes[key] = value;
+      }
+    }
+    setSavedColorSchemes(updatedSavedColorSchemes);
+    localStorage.setItem(
+      'savedColorSchemes',
+      JSON.stringify(updatedSavedColorSchemes)
+    );
+  };
+
   let colorSchemeElements = [];
   if (Object.keys(savedColorSchemes).length > 0) {
     for (const colorSchemeId in savedColorSchemes) {
@@ -35,6 +49,7 @@ function Saved() {
           buttonType="delete"
           colorSchemeData={savedColorSchemes[colorSchemeId]}
           colorSchemeTitle={colorSchemeTitle}
+          clickHandler={() => deleteColorScheme(colorSchemeId)}
         />
       );
     }
