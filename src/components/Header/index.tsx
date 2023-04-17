@@ -18,7 +18,12 @@ function Header() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/saved">Saved</NavLink>
+              <NavLink
+                to="/saved"
+                className={({ isActive }) => (isActive ? styles.active : '')}
+              >
+                Saved
+              </NavLink>
             </li>
           </ul>
         </nav>

@@ -8,7 +8,26 @@
   align-self: center;
 }
 
+.colorSchemeTitle {
+  margin: 0 auto;
+  max-width: 70rem;
+  padding: 0 1rem;
+  width: 100%;
+}
+
 .colorScheme {
   display: flex;
-  margin: 4rem 0;
+  margin: 1rem 0 2rem;
+}
+
+@media screen and (min-width: 46rem) {
+  .colorSchemeTitle {
+    padding: 0 1.5rem;
+  }
+}
+
+@media screen and (min-width: 74rem) {
+  .colorSchemeTitle {
+    padding: 0;
+  }
 }

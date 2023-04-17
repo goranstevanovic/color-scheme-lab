@@ -45,7 +45,7 @@ function ColorScheme({
   return (
     <div className={styles.colorSchemeWrapper}>
       {colorSchemeTitle && (
-        <p className="colorSchemeTitle">{colorSchemeTitle}</p>
+        <p className={styles.colorSchemeTitle}>{colorSchemeTitle}</p>
       )}
       <div className={styles.colorScheme}>
         {baseColorSwatch}
