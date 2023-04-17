@@ -47,6 +47,7 @@ function Saved() {
 
       colorSchemeElements.push(
         <ColorScheme
+          key={colorSchemeId}
           buttonType="delete"
           colorSchemeData={savedColorSchemes[colorSchemeId]}
           colorSchemeTitle={colorSchemeTitle}
