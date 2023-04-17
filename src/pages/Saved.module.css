@@ -1,0 +1,9 @@
+.info {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.info a {
+  color: inherit;
+  font-weight: bold;
+}

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ColorScheme from '../components/ColorScheme';
 import colorHarmonyRules from '../data/colorHarmonyRules';
+import styles from './Saved.module.css';
 
 type SavedColorSchemeType = {
   [key: string]: any;
@@ -56,12 +57,12 @@ function Saved() {
   }
 
   const noSavedColorSchemesElement = (
-    <>
+    <div className={styles.info}>
       <p>There are no saved color schemes.</p>
       <p>
         You can <Link to="/">create</Link> one easily and save it for later.
       </p>
-    </>
+    </div>
   );
 
   const output =
