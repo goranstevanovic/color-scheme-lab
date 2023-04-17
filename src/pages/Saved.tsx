@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import ColorScheme from '../components/ColorScheme';
 import colorHarmonyRules from '../data/colorHarmonyRules';
 
@@ -17,7 +18,7 @@ function Saved() {
     }
   }, []);
 
-  let output = [];
+  let colorSchemeElements = [];
   if (Object.keys(savedColorSchemes).length > 0) {
     for (const colorSchemeId in savedColorSchemes) {
       const colorScheme = savedColorSchemes[colorSchemeId];
@@ -29,7 +30,7 @@ function Saved() {
         ' ' +
         colorSchemeRule;
 
-      output.push(
+      colorSchemeElements.push(
         <ColorScheme
           buttonType="delete"
           colorSchemeData={savedColorSchemes[colorSchemeId]}
@@ -38,6 +39,20 @@ function Saved() {
       );
     }
   }
+
+  const noSavedColorSchemesElement = (
+    <>
+      <p>There are no saved color schemes.</p>
+      <p>
+        You can <Link to="/">create</Link> one easily and save it for later.
+      </p>
+    </>
+  );
+
+  const output =
+    colorSchemeElements.length > 0
+      ? colorSchemeElements
+      : noSavedColorSchemesElement;
 
   return (
     <>
