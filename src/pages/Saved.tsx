@@ -54,12 +54,7 @@ function Saved() {
       ? colorSchemeElements
       : noSavedColorSchemesElement;
 
-  return (
-    <>
-      <p>Saved page</p>
-      {output}
-    </>
-  );
+  return <>{output}</>;
 }
 
 export default Saved;
