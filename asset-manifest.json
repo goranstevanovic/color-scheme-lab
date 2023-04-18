@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/color-scheme-lab/static/css/main.0d249b75.css",
-    "main.js": "/color-scheme-lab/static/js/main.79e7be9f.js",
+    "main.js": "/color-scheme-lab/static/js/main.b4acd25a.js",
     "static/js/787.694738d7.chunk.js": "/color-scheme-lab/static/js/787.694738d7.chunk.js",
     "index.html": "/color-scheme-lab/index.html",
     "main.0d249b75.css.map": "/color-scheme-lab/static/css/main.0d249b75.css.map",
-    "main.79e7be9f.js.map": "/color-scheme-lab/static/js/main.79e7be9f.js.map",
+    "main.b4acd25a.js.map": "/color-scheme-lab/static/js/main.b4acd25a.js.map",
     "787.694738d7.chunk.js.map": "/color-scheme-lab/static/js/787.694738d7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0d249b75.css",
-    "static/js/main.79e7be9f.js"
+    "static/js/main.b4acd25a.js"
   ]
 }
