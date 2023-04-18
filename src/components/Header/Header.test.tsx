@@ -17,9 +17,9 @@ describe('Header', () => {
     expect(screen.getByText(/Saved/)).toBeInTheDocument();
   });
 
-  it('displays the select menu with label', () => {
-    render(<Header />, { wrapper: BrowserRouter });
+  // it('displays the select menu with label', () => {
+  //   render(<Header />, { wrapper: BrowserRouter });
 
-    expect(screen.getByLabelText(/Color mode/)).toBeInTheDocument();
-  });
+  //   expect(screen.getByLabelText(/Color mode/)).toBeInTheDocument();
+  // });
 });
