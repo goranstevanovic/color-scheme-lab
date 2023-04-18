@@ -16,7 +16,10 @@ function App() {
         <Route index element={<Create />} />
         <Route path="/saved" element={<Saved />} />
       </Route>
-    )
+    ),
+    {
+      basename: '/color-scheme-lab',
+    }
   );
 
   return (
