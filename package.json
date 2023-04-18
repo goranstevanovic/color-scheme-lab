@@ -1,6 +1,7 @@
 {
   "name": "color-scheme-lab",
   "version": "0.1.0",
+  "homepage": "https://goranstevanovic.github.io/color-scheme-lab/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
