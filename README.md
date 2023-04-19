@@ -33,6 +33,13 @@ My goal with this project was to simulate a professional work environment.
 - I worked with tasks in GitHub Projects: [view tasks](https://github.com/users/goranstevanovic/projects/6/views/1)
 - I used feature branches and pull requests: [example PR](https://github.com/goranstevanovic/color-scheme-lab/pull/13)
 
+## How to navigate this project
+
+- Example of managing local state (using useState, useEffect): [view code](https://github.com/goranstevanovic/color-scheme-lab/blob/eb301b0db188744f5f8884e19234f2a33e9bd52b/src/pages/Saved.tsx#L12-L34)
+- Example of a responsive CSS (using CSS Grid): [view code](https://github.com/goranstevanovic/color-scheme-lab/blob/eb301b0db188744f5f8884e19234f2a33e9bd52b/src/components/ColorHarmonyOptions/ColorHarmonyOptions.module.css#L51-L69)
+- Example of fetching data from the third-party API (using JavaScript Fetch): [view code](https://github.com/goranstevanovic/color-scheme-lab/blob/eb301b0db188744f5f8884e19234f2a33e9bd52b/src/components/ColorHarmonyOptions/index.tsx#L30-L40)
+- Example of a component test (using Jest and React Testing Library): [view code](https://github.com/goranstevanovic/color-scheme-lab/blob/eb301b0db188744f5f8884e19234f2a33e9bd52b/src/components/ColorSwatch/ColorSwatch.test.tsx#L6-L50)
+
 ## Getting started
 
 To run the app locally, you'll need to have a `Node.js` and an `npm` installed. Once you have those installed, follow these steps:
