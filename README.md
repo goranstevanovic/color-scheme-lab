@@ -24,3 +24,16 @@ Color Scheme Lab is a web application that allows users to create and save color
 ## Demo
 
 You can check out a live demo of the application at [https://colorschemelab.com/](https://colorschemelab.com/).
+
+## Getting started
+
+To run the app locally, you'll need to have a `Node.js` and an `npm` installed. Once you have those installed, follow these steps:
+
+1. Clone the repository:  
+   `git clone https://github.com/goranstevanovic/color-scheme-lab.git`
+1. Navigate to the project directory:  
+   `cd color-scheme-lab`
+1. Install dependencies:  
+   `npm install`
+1. Start the app:  
+   `npm start`
