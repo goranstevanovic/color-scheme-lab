@@ -20,3 +20,7 @@ Color Scheme Lab is a web application that allows users to create and save color
 - React Router
 - React Testing Library
 - TypeScript
+
+## Demo
+
+You can check out a live demo of the application at [https://colorschemelab.com/](https://colorschemelab.com/).
