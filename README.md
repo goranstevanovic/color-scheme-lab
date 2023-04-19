@@ -25,6 +25,14 @@ Color Scheme Lab is a web application that allows users to create and save color
 
 You can check out a live demo of the application at [https://colorschemelab.com/](https://colorschemelab.com/).
 
+## How I worked on this project
+
+My goal with this project was to simulate a professional work environment.
+
+- I designed the app using Figma: [view design](https://www.figma.com/file/n7AbRFzJwYXvOUH46Tu2PK/Design?node-id=12%3A1176&t=GZ5UACLvsyjj35Ap-1)
+- I worked with tasks in GitHub Projects: [view tasks](https://github.com/users/goranstevanovic/projects/6/views/1)
+- I used feature branches and pull requests: [example PR](https://github.com/goranstevanovic/color-scheme-lab/pull/13)
+
 ## Getting started
 
 To run the app locally, you'll need to have a `Node.js` and an `npm` installed. Once you have those installed, follow these steps:
