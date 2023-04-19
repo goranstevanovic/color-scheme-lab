@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+# Color Scheme Lab
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About
 
-## Available Scripts
+Color Scheme Lab is a web application that allows users to create and save color schemes based on chosen color and color harmony rules.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Choose a color and a color harmony rule (monochromatic, triad, complementary, etc.) to generate a color scheme
+- Save and delete color schemes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies used
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- CSS Modules
+- ESLint
+- GitHub Actions
+- Jest
+- Prettier
+- React
+- React Router
+- React Testing Library
+- TypeScript
 
-### `npm test`
+## Demo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You can check out a live demo of the application at [https://colorschemelab.com/](https://colorschemelab.com/).
 
-### `npm run build`
+## How I worked on this project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+My goal with this project was to simulate a professional work environment.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- I designed the app using Figma: [view design](https://www.figma.com/file/n7AbRFzJwYXvOUH46Tu2PK/Design?node-id=12%3A1176&t=GZ5UACLvsyjj35Ap-1)
+- I worked with tasks in GitHub Projects: [view tasks](https://github.com/users/goranstevanovic/projects/6/views/1)
+- I used feature branches and pull requests: [example PR](https://github.com/goranstevanovic/color-scheme-lab/pull/13)
+- I practiced test-driven development: [example test](https://github.com/goranstevanovic/color-scheme-lab/blob/main/src/components/Button/Button.test.tsx)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to navigate this project
 
-### `npm run eject`
+- Example of managing local state (using useState, useEffect): [view code](https://github.com/goranstevanovic/color-scheme-lab/blob/eb301b0db188744f5f8884e19234f2a33e9bd52b/src/pages/Saved.tsx#L12-L34)
+- Example of a responsive CSS (using CSS Grid): [view code](https://github.com/goranstevanovic/color-scheme-lab/blob/eb301b0db188744f5f8884e19234f2a33e9bd52b/src/components/ColorHarmonyOptions/ColorHarmonyOptions.module.css#L51-L69)
+- Example of fetching data from the third-party API (using JavaScript Fetch): [view code](https://github.com/goranstevanovic/color-scheme-lab/blob/eb301b0db188744f5f8884e19234f2a33e9bd52b/src/components/ColorHarmonyOptions/index.tsx#L30-L40)
+- Example of a component test (using Jest and React Testing Library): [view code](https://github.com/goranstevanovic/color-scheme-lab/blob/eb301b0db188744f5f8884e19234f2a33e9bd52b/src/components/ColorSwatch/ColorSwatch.test.tsx#L6-L50)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Getting started
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run the app locally, you'll need to have a `Node.js` and an `npm` installed. Once you have those installed, follow these steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Clone the repository:  
+   `git clone https://github.com/goranstevanovic/color-scheme-lab.git`
+1. Navigate to the project directory:  
+   `cd color-scheme-lab`
+1. Install dependencies:  
+   `npm install`
+1. Start the app:  
+   `npm start`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Usage
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Choose a base color using the color picker.
+1. Choose a color harmony rule from the dropdown menu.
+1. Click the `Generate Color Scheme` button to generate a color scheme based on the selected base color and color harmony rule.
+1. Click the `Save Color Scheme` button to save the color scheme.
+1. To view saved color schemes, click on `Saved` in the top navigation menu.
+1. To delete an existing color scheme, click on the `Delete Color Scheme` button below the scheme you want to delete.
